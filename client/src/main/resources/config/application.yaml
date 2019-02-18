@@ -1,0 +1,13 @@
+server:
+  port: 9001
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: secret
+      access-token-uri: http://localhost:9000/auth/oauth/token
+      user-authorization-uri: http://localhost:9000/auth/oauth/authorize
+    resource:
+      token-info-uri: http://localhost:9000/auth/oauth/check_token
+      #user-info-uri: http://localhost:9002/user/me
+      #这里两种获取用户的方式，都可以。但是只能存在一种
